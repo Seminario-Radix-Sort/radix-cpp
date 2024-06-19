@@ -166,7 +166,7 @@ Com o ambiente preparado, os seguintes passos são para a instalação, compila�
   make run
   ```
 
-5. Se necessário, apague a última compilação da pasta `build`:
+4. Se necessário, apague a última compilação da pasta `build`:
   ```console
   make clean
   ```
@@ -222,7 +222,6 @@ Ubuntu 22.04.4 LTS | g++ (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0 | Ryzen 5 5500U 
 
 [![Gmail][gmail-badge]][gmail-autor3]
 [![Linkedin][linkedin-badge]][linkedin-autor3]
-[![Telegram][telegram-badge]][telegram-autor3]
 </div>
 
 <p align="right">(<a href="#readme-topo">voltar ao topo</a>)</p>
@@ -262,8 +261,7 @@ Ubuntu 22.04.4 LTS | g++ (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0 | Ryzen 5 5500U 
 [linkedin-autor2]: https://www.linkedin.com/in/guilherme-alvarenga-de-azevedo-959474201/
 [telegram-autor2]: https://t.me/alvarengazv
 [gmail-autor2]: mailto:gui.alvarengas234@gmail.com
-[linkedin-autor3]: https://www.linkedin.com/
-[telegram-autor3]: https://t.me/
+[linkedin-autor3]: https://www.linkedin.com/in/jo%C3%A3o-paulo-cunha-faria-219584270/
 [gmail-autor3]: mailto:joaopaulofaria98@gmail.com
 [linkedin-badge]: https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=Linkedin&logoColor=white
 [telegram-badge]: https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white

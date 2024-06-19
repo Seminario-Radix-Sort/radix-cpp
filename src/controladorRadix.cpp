@@ -38,12 +38,11 @@ void ControladorRadix::calcularTabelaSaidaRadix() {
         tabelaSaida += to_string(t) + ",";
         for(auto o : ordens){
             string nomeArquivo = "datasets/";
-            string nomeOrdem, dirOrdem;
+            string dirOrdem;
 
             dirOrdem = toLower(o) + "s/";
-            nomeOrdem = o;
 
-            nomeArquivo += dirOrdem + to_string(t) + nomeOrdem;
+            nomeArquivo += dirOrdem + to_string(t) + o;
 
             for(auto tp : tipos){
                 nomeArquivo += tp + ".txt";
@@ -51,11 +50,11 @@ void ControladorRadix::calcularTabelaSaidaRadix() {
                 vector<unsigned long long int> vetor = arquivo.leituraArquivo();
                 RadixSort radixSort = RadixSort();
                 float tempo = 0;
+                radixSort.setTamanho(t);
+                radixSort.setBase(10);
 
                 for(int j = 0; j < 10; j++){
                     radixSort.setVetor(vetor);
-                    radixSort.setTamanho(t);
-                    radixSort.setBase(10);
                     auto inicio = chrono::high_resolution_clock::now();
                     radixSort.radixSort();
                     auto fim = chrono::high_resolution_clock::now();
@@ -70,7 +69,7 @@ void ControladorRadix::calcularTabelaSaidaRadix() {
 
                     cout << "Desordenado\n";
                     ofstream arquivo;
-                    arquivo.open("datasets/" + dirOrdem + to_string(t) + nomeOrdem + tp + "-RadixSortDesordenado.txt");
+                    arquivo.open("datasets/" + dirOrdem + to_string(t) + o + tp + "-RadixSortDesordenado.txt");
                     if(arquivo.is_open()){
                         for(int i = 0; i < radixSort.getTamanho(); i++){
                             arquivo << radixSort.getVetor()[i] << " ";
@@ -81,7 +80,7 @@ void ControladorRadix::calcularTabelaSaidaRadix() {
                     }
                 }
                 tabelaSaida += to_string((tempo / 10) / 1000) + ",";
-                nomeArquivo = "datasets/" + dirOrdem + to_string(t) + nomeOrdem;
+                nomeArquivo = "datasets/" + dirOrdem + to_string(t) + o;
             }
         }
         tabelaSaida += "\n"; 
