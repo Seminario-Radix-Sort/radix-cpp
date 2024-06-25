@@ -31,6 +31,10 @@ int RadixSort::getTamanho() {
     return tamanho;
 }
 
+int RadixSort::getBase() {
+    return base;
+}
+
 unsigned long long int RadixSort::getMaior() {
     unsigned long long int maior = this->vetor[0];
     for (int i = 1; i < tamanho; i++) {
@@ -39,10 +43,6 @@ unsigned long long int RadixSort::getMaior() {
         }
     }
     return maior;
-}
-
-int RadixSort::getBase() {
-    return base;
 }
 
 void RadixSort::radixSort() {
