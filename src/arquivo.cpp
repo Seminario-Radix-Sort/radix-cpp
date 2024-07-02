@@ -44,7 +44,7 @@ void Arquivo::escritaArquivo(string conteudoSaida) {
     std::time_t t = std::time(nullptr);
     std::tm tm = *std::localtime(&t);
     std::stringstream buffer;
-    buffer << std::put_time(&tm, "%d-%m-%Y-%H:%M:%S");
+    buffer << std::put_time(&tm, "%d-%m-%Y-%H-%M-%S");
     std::string dateTime(buffer.str());
 
     nomeArquivo += "-" + dateTime + ".csv";
